@@ -151,9 +151,9 @@ strong {
 
 .nav-img span {
   display: block;
-  background: url(../images/myimg.png);
+  background: url(../images/me.png);
   background-repeat: no-repeat;
-  background-position: center 10%;
+  background-position: center 20%;
   background-size: cover;
   width: 150px;
   height: 100%;

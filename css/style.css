@@ -721,7 +721,7 @@ strong {
   position: relative;
   width: 500px;
   background-image: url(../images/pc.png);
-  background-size: contain;
+  background-size: 480px;
   background-repeat: no-repeat;
   background-position: center top;
   height: 600px;
@@ -729,11 +729,10 @@ strong {
 
 .goorm .main-project-video-pc video {
   position: absolute;
-  top: 4%;
-  left: 50%;
+  top: 23px;
+  left: 250px;
   transform: translateX(-50%);
-  width: 100%;
-  max-width: 435px;
+  width: 435px;
   height: auto;
 }
 
@@ -741,7 +740,7 @@ strong {
   position: relative;
   width: 230px;
   background-image: url(../images/phoneBGIsmall.png);
-  background-size: contain;
+  background-size: 220px;
   background-repeat: no-repeat;
   background-position: center top;
   height: 600px;
@@ -750,9 +749,8 @@ strong {
 .goorm .main-project-video-mobile video {
   position: absolute;
   top: 74px;
-  left: 110px;
-  width: 100%;
-  max-width: 162px;
+  left: 115px;
+  width: 165px;
 }
 
 .desc-cover .pwa {
@@ -818,9 +816,30 @@ strong {
   width: 300px;
 }
 
+.zara .main-project-video-pc {
+  width: 480px;
+  background-size: 480px;
+}
+
 .zara .main-project-video-pc video {
-  top: 5%;
-  width: 510px;
+  position: absolute;
+  top: 24px;
+  left: 240px;
+  transform: translateX(-50%);
+  width: 450px;
+  height: auto;
+}
+
+.zara .main-project-video-mobile {
+  width: 220px;
+  background-size: 220px;
+}
+
+.zara .main-project-video-mobile video {
+  position: absolute;
+  top: 72px;
+  left: 110px;
+  width: 165px;
 }
 
 .carrot .main-project-video-pc {
@@ -1163,42 +1182,6 @@ strong {
     height: 2500px;
   }
 
-  .goorm .main-project-video-pc {
-    position: relative;
-    width: 500px;
-    background-image: url(../images/pc.png);
-    background-size: 480px;
-    background-repeat: no-repeat;
-    background-position: center top;
-    height: 600px;
-  }
-
-  .goorm .main-project-video-pc video {
-    position: absolute;
-    top: 23px;
-    left: 240px;
-    transform: translateX(-50%);
-    width: 435px;
-    height: auto;
-  }
-
-  .goorm .main-project-video-mobile {
-    position: relative;
-    width: 230px;
-    background-image: url(../images/phoneBGIsmall.png);
-    background-size: 220px;
-    background-repeat: no-repeat;
-    background-position: center top;
-    height: 600px;
-  }
-
-  .goorm .main-project-video-mobile video {
-    position: absolute;
-    top: 74px;
-    left: 110px;
-    width: 165px;
-  }
-
   .goorm .main-project-desc {
     width: 100%;
     max-width: 400px;
@@ -1237,40 +1220,6 @@ strong {
   .goorm .pwa-4 {
     top: 307px;
     left: 143px;
-  }
-
-  .oi .main-project-video-mobile {
-    width: 500px;
-  }
-
-  .oi .main-project-video-mobile video {
-    width: 300px;
-  }
-
-  .zara .main-project-video-pc {
-    width: 480px;
-    background-size: 480px;
-  }
-
-  .zara .main-project-video-pc video {
-    position: absolute;
-    top: 24px;
-    left: 240px;
-    transform: translateX(-50%);
-    width: 450px;
-    height: auto;
-  }
-
-  .zara .main-project-video-mobile {
-    width: 220px;
-    background-size: 220px;
-  }
-
-  .zara .main-project-video-mobile video {
-    position: absolute;
-    top: 72px;
-    left: 110px;
-    width: 165px;
   }
 
   .carrot .main-project-video-pc {
@@ -1341,7 +1290,7 @@ strong {
   }
 
   .logo {
-    margin: 0 2rem 0 0;
+    margin: 0 1rem 0 0;
   }
 
   .nav {
@@ -1665,6 +1614,7 @@ strong {
     position: fixed;
     top: 0;
     height: 50px;
+    width: 100%;
   }
 
   .nav {
@@ -1679,7 +1629,12 @@ strong {
     font-size: 1rem;
   }
 
+  .nav nav {
+    padding: 0;
+  }
+
   .nav-menu li button {
+    font-size: 1.5rem;
     padding: 0 0.2rem;
     width: 100%;
   }
@@ -1689,22 +1644,27 @@ strong {
   }
 
   .profile p {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .hash-tag {
     font-size: 0.8rem;
   }
 
-  .about-me {
+  .about-me,
+  .skill {
     height: max-content;
+    padding: 5rem 1rem;
   }
 
   .skill-items li {
     margin: 1rem;
   }
+  .about-me p,
+  .skills-desc p {
+    font-size: 1rem;
+  }
 
-  .skill,
   .goorm,
   .oi,
   .zara,
@@ -1713,10 +1673,16 @@ strong {
   .coming-soon,
   .mini {
     height: max-content;
+    padding: 1rem;
   }
 
   .goorm {
     height: max-content;
+  }
+
+  .pwa {
+    width: 350px;
+    margin: auto;
   }
 
   .project-title {
@@ -1734,6 +1700,11 @@ strong {
 
   .main-project-video-cover {
     flex-direction: column;
+  }
+
+  .goorm .main-project-desc,
+  .main-project-desc {
+    padding: 3rem 0;
   }
 
   .goorm .main-project-video-pc,

@@ -170,7 +170,7 @@ nav.addEventListener('click', (e) => {
   if (menu === 'logo') {
     profile.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
-  switch ((menu, menuIcon)) {
+  switch (menu || menuIcon) {
     case 'nav-about':
       aboutSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
       break;

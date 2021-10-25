@@ -1,10 +1,10 @@
 const nav = document.querySelector('.nav');
-const navAbout = document.querySelector('.nav-about');
-const navSkill = document.querySelector('.nav-skill');
-const navMain = document.querySelector('.nav-main-project');
-const navSub = document.querySelector('.nav-sub-project');
-const navComingSoon = document.querySelector('.nav-coming-soon');
-const navCunnect = document.querySelector('.nav-cunnect');
+const navAbout = document.querySelectorAll('.nav-about');
+const navSkill = document.querySelectorAll('.nav-skill');
+const navMain = document.querySelectorAll('.nav-main-project');
+const navSub = document.querySelectorAll('.nav-sub-project');
+const navComingSoon = document.querySelectorAll('.nav-coming-soon');
+const navCunnect = document.querySelectorAll('.nav-cunnect');
 
 const profile = document.querySelector('.profile');
 const aboutSection = document.querySelector('.about-me');
@@ -83,45 +83,47 @@ const ON_COLOR = '#0061a8';
 const OFF_COLOR = '#999';
 
 function onNavTextColor(userTop) {
-  if (userTop < aboutSectionScrollTop) {
-    navAbout.style.color = OFF_COLOR;
-  } else if (
-    userTop > aboutSectionScrollTop &&
-    userTop < skillSectionScrollTop
-  ) {
-    navAbout.style.color = ON_COLOR;
-    navSkill.style.color = OFF_COLOR;
-  } else if (
-    userTop > skillSectionScrollTop &&
-    userTop < mainProjectSectionScrollTop
-  ) {
-    navAbout.style.color = OFF_COLOR;
-    navSkill.style.color = ON_COLOR;
-    navMain.style.color = OFF_COLOR;
-  } else if (
-    userTop > mainProjectSectionScrollTop &&
-    userTop < subProjectSectionScrollTop
-  ) {
-    navSkill.style.color = OFF_COLOR;
-    navMain.style.color = ON_COLOR;
-    navSub.style.color = OFF_COLOR;
-  } else if (
-    userTop > subProjectSectionScrollTop &&
-    userTop < comingSoonSectionScrollTop
-  ) {
-    navMain.style.color = OFF_COLOR;
-    navSub.style.color = ON_COLOR;
-    navComingSoon.style.color = OFF_COLOR;
-  } else if (
-    userTop > comingSoonSectionScrollTop &&
-    userTop < cunnectSectionScrollTop
-  ) {
-    navSub.style.color = OFF_COLOR;
-    navComingSoon.style.color = ON_COLOR;
-    navCunnect.style.color = OFF_COLOR;
-  } else if (userTop > cunnectSectionScrollTop) {
-    navComingSoon.style.color = OFF_COLOR;
-    navCunnect.style.color = ON_COLOR;
+  for (let i = 0; i <= 1; i++) {
+    if (userTop < aboutSectionScrollTop) {
+      navAbout[i].style.color = OFF_COLOR;
+    } else if (
+      userTop > aboutSectionScrollTop &&
+      userTop < skillSectionScrollTop
+    ) {
+      navAbout[i].style.color = ON_COLOR;
+      navSkill[i].style.color = OFF_COLOR;
+    } else if (
+      userTop > skillSectionScrollTop &&
+      userTop < mainProjectSectionScrollTop
+    ) {
+      navAbout[i].style.color = OFF_COLOR;
+      navSkill[i].style.color = ON_COLOR;
+      navMain[i].style.color = OFF_COLOR;
+    } else if (
+      userTop > mainProjectSectionScrollTop &&
+      userTop < subProjectSectionScrollTop
+    ) {
+      navSkill[i].style.color = OFF_COLOR;
+      navMain[i].style.color = ON_COLOR;
+      navSub[i].style.color = OFF_COLOR;
+    } else if (
+      userTop > subProjectSectionScrollTop &&
+      userTop < comingSoonSectionScrollTop
+    ) {
+      navMain[i].style.color = OFF_COLOR;
+      navSub[i].style.color = ON_COLOR;
+      navComingSoon[i].style.color = OFF_COLOR;
+    } else if (
+      userTop > comingSoonSectionScrollTop &&
+      userTop < cunnectSectionScrollTop
+    ) {
+      navSub[i].style.color = OFF_COLOR;
+      navComingSoon[i].style.color = ON_COLOR;
+      navCunnect[i].style.color = OFF_COLOR;
+    } else if (userTop > cunnectSectionScrollTop) {
+      navComingSoon[i].style.color = OFF_COLOR;
+      navCunnect[i].style.color = ON_COLOR;
+    }
   }
 }
 let progressbar = document.querySelectorAll('.progressbar');
@@ -133,6 +135,7 @@ function onProgressbaraa(i, num, till) {
     (progressNum[i].innerHTML = num + '%'),
     (progressNum[i].style.left = num + '%'));
 }
+
 let num = 0;
 function onProgressbar() {
   for (let i = 0; i < 7; i++) {

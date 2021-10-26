@@ -1085,6 +1085,14 @@ strong {
   content: '"스위프트 배워서 아이폰 어플 만들기"';
 }
 
+.coming-soon-cover li:nth-child(5) {
+  background-image: url(../images/typescript.png);
+}
+
+.coming-soon-cover li:nth-child(5)::after {
+  content: '"타입스크립트"';
+}
+
 .coming-soon-cover li::after {
   display: none;
   justify-content: center;

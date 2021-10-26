@@ -115,12 +115,12 @@ function onNavTextColor(userTop) {
       navComingSoon[i].style.color = OFF_COLOR;
     } else if (
       userTop > comingSoonSectionScrollTop &&
-      userTop < cunnectSectionScrollTop
+      userTop + 300 < cunnectSectionScrollTop
     ) {
       navSub[i].style.color = OFF_COLOR;
       navComingSoon[i].style.color = ON_COLOR;
       navCunnect[i].style.color = OFF_COLOR;
-    } else if (userTop > cunnectSectionScrollTop) {
+    } else if (userTop + 300 > cunnectSectionScrollTop) {
       navComingSoon[i].style.color = OFF_COLOR;
       navCunnect[i].style.color = ON_COLOR;
     }

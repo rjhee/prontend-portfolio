@@ -90,6 +90,10 @@ strong {
   color: var(--text-black);
 }
 
+i {
+  pointer-events: none;
+}
+
 .sr-only {
   position: absolute;
   left: -99999px;

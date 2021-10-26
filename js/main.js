@@ -168,12 +168,12 @@ window.addEventListener('scroll', (e) => {
 
 nav.addEventListener('click', (e) => {
   const menu = e.target.className;
-  const menuIcon = e.target.offsetParent.className;
 
+  console.log(e.target.tagName);
   if (menu === 'logo') {
     profile.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
-  switch (menu || menuIcon) {
+  switch (menu) {
     case 'nav-about':
       aboutSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
       break;
